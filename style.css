@@ -151,13 +151,42 @@
     border: 1px solid black;
 }
 
-.service-section{
+.anchor-link {
+    color: navy;
+}
+
+.service-section {
     padding: 20px;
 }
-.services{
+
+.services {
     flex-wrap: wrap;
 }
-.services>.triple-card{
+
+.services>.triple-card {
     margin: 20px 0;
     height: 300px;
+}
+
+.service-tile {
+    display: grid;
+    padding: 20px 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.service-tile:hover {
+    transform: translate(0, -20px);
+    transition: .2s;
+}
+
+.service-tile>.icon {
+    width: 80px;
+    height: 80px;
+    background-color: blue;
+}
+
+.service-tile>.title {
+    font-size: 24px;
+    font-weight: 700;
 }
