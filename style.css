@@ -7,6 +7,21 @@
     font-family: 'Asap', sans-serif;
 }
 
+*::selection {
+    background-color: gold;
+}
+
+html {
+    scroll-behavior: smooth;
+    cursor: url(https://blueslag.com/wp-content/uploads/2021/05/icons8-circle-24-2.png), auto;
+}
+
+body {
+    max-width: 2200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
 .topbar {
     padding: 10px 40px;
     background-color: black;
@@ -25,6 +40,12 @@
 
 .logo {
     font-size: 26px;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
 }
 
 .primary-menu,
@@ -84,7 +105,16 @@
     background-color: gold;
 }
 
+.title-center {
+    text-align: center;
+    padding: 30px 20px;
+}
 
+.flex-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .container {
     display: flex;
@@ -93,15 +123,28 @@
     padding: 20px 0;
 }
 
-.hero-con {
-    background-color: black;
-}
-
 .dual-container {
     width: 48%;
 }
 
-.bg-img {
+section {
+    min-height: 100vh;
+}
+
+/* Hero Con */
+.hero-con {
+    background-color: black;
+}
+
+.hero-con>.dual-container:first-child {
+    background-color: black;
+    color: white;
+    display: grid;
+    padding: 70px 20px;
+    height: 400px;
+}
+
+.hero-con>.dual-container:last-child {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -109,13 +152,6 @@
     padding: 20px;
 }
 
-.hero-text-con {
-    background-color: black;
-    color: white;
-    display: grid;
-    padding: 70px 20px;
-    height: 400px;
-}
 
 .anchor-btn {
     padding: 8px 10px;
@@ -142,13 +178,25 @@
 
 .team-con>.dual-container:last-child {
     width: 40%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 400px;
+    padding: 20px;
 }
 
+.highlights {
+    background-color: #fafafa;
+}
 
-.triple-card {
-    width: 320px;
-    height: 200px;
-    border: 1px solid black;
+.highlights>.triple-card {
+    height: 350px;
+    width: 350px;
+    background-size: cover;
+}
+
+.highlights>.triple-card:nth-child(2) {
+    transform: translate(0, -80px);
 }
 
 .anchor-link {
@@ -164,15 +212,18 @@
 }
 
 .services>.triple-card {
+    width: 30%;
     margin: 20px 0;
-    height: 300px;
+    min-height: 300px;
 }
 
 .service-tile {
     display: grid;
-    padding: 20px 10px;
+    padding: 25px 15px;
     cursor: pointer;
     transition: .2s;
+    box-shadow: 0px 0px 30px #d2d1d1;
+    border-radius: 10px;
 }
 
 .service-tile:hover {
@@ -189,4 +240,77 @@
 .service-tile>.title {
     font-size: 24px;
     font-weight: 700;
+}
+
+.Success-Stories-section {
+    background-color: black;
+    color: white;
+    padding: 30px 20px;
+}
+
+.Success-Stories {
+    flex-wrap: wrap;
+    padding: 20px 30px;
+}
+
+.Success-Stories>.dual-container {
+    border: 1px solid;
+    margin-top: 30px;
+    display: flex;
+    background-color: white;
+    color: black;
+}
+
+.Success-Stories>.dual-container>img {
+    width: 50%;
+}
+
+.Success-Stories>.dual-container>.success-storie-content {
+    padding: 30px 15px;
+    display: grid;
+}
+
+.Success-Stories>.dual-container>.success-storie-content>img {
+    width: 80%;
+}
+
+.counter-container {
+    background-color: black;
+    padding: 100px 10px;
+}
+
+.counter-container>.triple-card>* {
+    transition: .2s;
+}
+
+.counter-container>.triple-card {
+    height: 200px;
+    border: 2px solid gold;
+    border-radius: 20px;
+    width: 30%;
+    color: gold;
+    font-size: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.counter-container>.triple-card:hover {
+    transform: scale(1.1);
+    transition: .2s;
+}
+
+.counter-container>.triple-card>.icon {
+    width: 100px;
+    height: 100px;
+    background-color: gold;
+}
+
+.counter-container>.triple-card:hover .icon {
+    transform: translate(105%, -100px);
+    border-radius: 50%;
+}
+
+.counter-container>.triple-card:hover .counter {
+    transform: translate(-35%, 0);
 }
